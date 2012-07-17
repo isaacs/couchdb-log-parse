@@ -1,0 +1,233 @@
+[Thu, 12 Jul 2012 06:47:06 GMT] [info] [<0.11363.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/minimatch?pkg=minimatch&version=0.2.4 200
+[Thu, 12 Jul 2012 06:59:40 GMT] [error] [<0.17707.102>] {error_report,<0.31.0>,
+                         {<0.17707.102>,crash_report,
+                          [[{initial_call,
+                             {mochiweb_acceptor,init,
+                              ['Argument__1','Argument__2','Argument__3']}},
+                            {pid,<0.17707.102>},
+                            {registered_name,[]},
+                            {error_info,
+                             {error,function_clause,
+                              [{lists,last,
+                                [[]],
+                                [{file,"lists.erl"},{line,162}]},
+                               {mochiweb_request,get,2,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/mochiweb/mochiweb_request.erl"},
+                                 {line,91}]},
+                               {couch_httpd,handle_request_int,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_httpd.erl"},
+                                 {line,336}]},
+                               {couch_httpd,handle_request,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_httpd.erl"},
+                                 {line,233}]},
+                               {mochiweb_http,headers,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/mochiweb/mochiweb_http.erl"},
+                                 {line,226}]},
+                               {proc_lib,init_p_do_apply,3,
+                                [{file,"proc_lib.erl"},{line,227}]}]}},
+                            {ancestors,
+                             [couch_httpd,couch_secondary_services,
+                              couch_server_sup,<0.32.0>]},
+                            {messages,[]},
+                            {links,[<0.124.0>,#Port<0.3359465>]},
+                            {dictionary,[]},
+                            {trap_exit,false},
+                            {status,running},
+                            {heap_size,6765},
+                            {stack_size,24},
+                            {reductions,2322}],
+                           []]}}
+[Thu, 12 Jul 2012 06:59:41 GMT] [info] [<0.13022.102>] 10.77.61.252 - - GET /registry/ 200
+[Thu, 12 Jul 2012 06:59:41 GMT] [info] [<0.17705.102>] 10.115.51.95 - - GET /registry/_design/ui/layout.css 200
+
+[Thu, 12 Jul 2012 06:59:41 GMT] [info] [<0.17718.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/mime?pkg=mime 200
+[Thu, 12 Jul 2012 06:59:45 GMT] [error] [<0.17748.102>] OS Process Error <0.10491.97> :: {not_found,
+                                                          <<"document not found">>}
+[Thu, 12 Jul 2012 06:59:45 GMT] [info] [<0.17748.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/jsdoc-gp?pkg=jsdoc-gp 404
+[Thu, 12 Jul 2012 07:01:25 GMT] [info] [<0.19080.102>] 10.115.51.95 - - GET /registry/mkdirp/mkdirp-0.3.3.tgz?pkg=mkdirp&att=mkdirp-0.3.3.tgz 200
+[Thu, 12 Jul 2012 07:01:25 GMT] [error] [<0.19152.102>] OS Process Error <0.10491.97> :: {not_found,
+                                                          <<"document not found">>}
+[Thu, 12 Jul 2012 07:01:25 GMT] [info] [<0.19152.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/line-cutter?pkg=line-cutter 404
+[Thu, 12 Jul 2012 07:01:28 GMT] [info] [<0.19212.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/connect?pkg=connect 304
+[Thu, 12 Jul 2012 07:01:28 GMT] [info] [<0.19213.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap 200
+[Thu, 12 Jul 2012 07:01:29 GMT] [error] [<0.19214.102>] OS Process Error <0.10491.97> :: {not_found,
+                                                          <<"document not found">>}
+[Thu, 12 Jul 2012 07:01:29 GMT] [info] [<0.19214.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/hotlight-node?pkg=hotlight-node 404
+[Thu, 12 Jul 2012 07:01:29 GMT] [error] [<0.19232.102>] OS Process Error <0.10491.97> :: {not_found,
+                                                          <<"document not found">>}
+[Thu, 12 Jul 2012 07:01:29 GMT] [info] [<0.19232.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/douban-fecher?pkg=douban-fecher 404
+[Thu, 12 Jul 2012 07:02:50 GMT] [info] [<0.20233.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/socket?pkg=socket 404
+[Thu, 12 Jul 2012 07:02:50 GMT] [info] [<0.20234.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/socket.io?pkg=socket.io&version=0.7.9 304
+[Thu, 12 Jul 2012 07:02:50 GMT] [info] [<0.20236.102>] 10.115.51.95 - - HEAD /registry 200
+[Thu, 12 Jul 2012 07:11:16 GMT] [info] [<0.14143.102>] 10.77.61.252 - - GET /registry/ 200
+[Thu, 12 Jul 2012 07:11:17 GMT] [error] [<0.25670.102>] OS Process Error <0.10393.97> :: {not_found,
+                                                          <<"document not found">>}
+[Thu, 12 Jul 2012 07:11:17 GMT] [info] [<0.25670.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/coffeescript?pkg=coffeescript 404
+[Thu, 12 Jul 2012 07:13:48 GMT] [info] [<0.27021.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap&version=0.0.2 200
+[Thu, 12 Jul 2012 07:13:48 GMT] [error] [<0.27023.102>] {error_report,<0.31.0>,
+                         {<0.27023.102>,crash_report,
+                          [[{initial_call,
+                             {mochiweb_acceptor,init,
+                              ['Argument__1','Argument__2','Argument__3']}},
+                            {pid,<0.27023.102>},
+                            {registered_name,[]},
+                            {error_info,
+                             {error,function_clause,
+                              [{lists,last,
+                                [[]],
+                                [{file,"lists.erl"},{line,162}]},
+                               {mochiweb_request,get,2,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/mochiweb/mochiweb_request.erl"},
+                                 {line,91}]},
+                               {couch_httpd,handle_request_int,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_httpd.erl"},
+                                 {line,336}]},
+                               {couch_httpd,handle_request,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_httpd.erl"},
+                                 {line,233}]},
+                               {mochiweb_http,headers,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/mochiweb/mochiweb_http.erl"},
+                                 {line,226}]},
+                               {proc_lib,init_p_do_apply,3,
+                                [{file,"proc_lib.erl"},{line,227}]}]}},
+                            {ancestors,
+                             [couch_httpd,couch_secondary_services,
+                              couch_server_sup,<0.32.0>]},
+                            {messages,[]},
+                            {links,[<0.124.0>,#Port<0.3368894>]},
+                            {dictionary,[]},
+                            {trap_exit,false},
+                            {status,running},
+                            {heap_size,4181},
+                            {stack_size,24},
+                            {reductions,2190}],
+                           []]}}
+[Thu, 12 Jul 2012 07:13:48 GMT] [info] [<0.25229.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/bbb?pkg=bbb 200
+[Thu, 12 Jul 2012 07:13:48 GMT] [info] [<0.27024.102>] 10.115.51.95 - - GET /registry/_design/app/_show/package/commander?pkg=commander 304
+[Thu, 12 Jul 2012 07:45:54 GMT] [error] [<0.13208.103>] OS Process Error <0.24168.95> :: {<<"list_error">>,
+                                                          <<"not a row 'reset'">>}
+[Thu, 12 Jul 2012 07:45:54 GMT] [info] [<0.13208.103>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap 200
+[Thu, 12 Jul 2012 07:45:54 GMT] [info] [<0.13072.103>] 10.115.51.95 - - GET /registry/miso.dataset 200
+[Thu, 12 Jul 2012 07:45:55 GMT] [info] [<0.13209.103>] 10.115.51.95 - - GET /registry/wordwrap/wordwrap-0.0.2.tgz?pkg=wordwrap&att=wordwrap-0.0.2.tgz 200
+[Thu, 12 Jul 2012 07:45:55 GMT] [info] [<0.13221.103>] 10.115.51.95 - - GET /registry/_design/app/_show/package/backbone?pkg=backbone 304
+[Thu, 12 Jul 2012 08:47:44 GMT] [info] [<0.18774.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/bindings?pkg=bindings 304
+[Thu, 12 Jul 2012 08:47:44 GMT] [info] [<0.18777.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/mime?pkg=mime 304
+[Thu, 12 Jul 2012 08:47:44 GMT] [error] [<0.18776.104>] Uncaught error in HTTP request: {error,
+                                                         {case_clause,{[]}}}
+[Thu, 12 Jul 2012 08:47:44 GMT] [info] [<0.18776.104>] Stacktrace: [{couch_query_servers,validate_doc_update,
+                                     5,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_query_servers.erl"},
+                                      {line,227}]},
+                                    {couch_db,
+                                     '-validate_doc_update/3-lc$^0/1-0-',5,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_db.erl"},
+                                      {line,470}]},
+                                    {couch_db,validate_doc_update,3,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_db.erl"},
+                                      {line,470}]},
+                                    {couch_db,prep_and_validate_update,5,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_db.erl"},
+                                      {line,491}]},
+                                    {couch_db,
+                                     '-prep_and_validate_updates/6-fun-2-',6,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_db.erl"},
+                                      {line,558}]},
+                                    {lists,foldl,3,
+                                     [{file,"lists.erl"},{line,1197}]},
+                                    {couch_db,prep_and_validate_updates,6,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_db.erl"},
+                                      {line,556}]},
+                                    {couch_db,update_docs,4,
+                                     [{file,
+                                       "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_db.erl"},
+                                      {line,746}]}]
+[Thu, 12 Jul 2012 08:47:44 GMT] [error] [<0.18776.104>] Uncaught server error: {case_clause,{[]}}
+[Thu, 12 Jul 2012 08:47:44 GMT] [info] [<0.18776.104>] 10.115.51.95 - - PUT /registry/_design/app/_update/package/smith?pkg=smith&rev=8-f1f2f17e316eafd2113c6de7d2974e6a 500
+[Thu, 12 Jul 2012 08:47:44 GMT] [info] [<0.18778.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/lingo?pkg=lingo 304
+[Thu, 12 Jul 2012 08:51:44 GMT] [info] [<0.21626.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/redis?pkg=redis&version=0.7.2 200
+[Thu, 12 Jul 2012 08:51:44 GMT] [info] [<0.21627.104>] 10.115.51.95 - - GET /registry/npm/npm-1.1.39.tgz?pkg=npm&att=npm-1.1.39.tgz 200
+[Thu, 12 Jul 2012 08:51:44 GMT] [error] [<0.21628.104>] {error_report,<0.31.0>,
+                         {<0.21628.104>,crash_report,
+                          [[{initial_call,
+                             {mochiweb_acceptor,init,
+                              ['Argument__1','Argument__2','Argument__3']}},
+                            {pid,<0.21628.104>},
+                            {registered_name,[]},
+                            {error_info,
+                             {error,function_clause,
+                              [{lists,last,
+                                [[]],
+                                [{file,"lists.erl"},{line,162}]},
+                               {mochiweb_request,get,2,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/mochiweb/mochiweb_request.erl"},
+                                 {line,91}]},
+                               {couch_httpd,handle_request_int,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_httpd.erl"},
+                                 {line,336}]},
+                               {couch_httpd,handle_request,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/couch_httpd.erl"},
+                                 {line,233}]},
+                               {mochiweb_http,headers,5,
+                                [{file,
+                                  "/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/mochiweb/mochiweb_http.erl"},
+                                 {line,226}]},
+                               {proc_lib,init_p_do_apply,3,
+                                [{file,"proc_lib.erl"},{line,227}]}]}},
+                            {ancestors,
+                             [couch_httpd,couch_secondary_services,
+                              couch_server_sup,<0.32.0>]},
+                            {messages,[]},
+                            {links,[<0.124.0>,#Port<0.3428518>]},
+                            {dictionary,[]},
+                            {trap_exit,false},
+                            {status,running},
+                            {heap_size,6765},
+                            {stack_size,24},
+                            {reductions,2337}],
+                           []]}}
+[Thu, 12 Jul 2012 08:51:44 GMT] [info] [<0.21629.104>] 10.115.51.95 - - GET /registry/stylus/stylus-0.28.1.tgz?pkg=stylus&att=stylus-0.28.1.tgz 200
+[Thu, 12 Jul 2012 08:51:44 GMT] [info] [<0.30822.102>] 10.77.61.252 - - GET /registry/ 200
+[Thu, 12 Jul 2012 08:51:44 GMT] [info] [<0.21630.104>] 10.115.51.95 - - GET /registry/express/express-2.5.11.tgz?pkg=express&att=express-2.5.11.tgz 200
+[Thu, 12 Jul 2012 08:51:44 GMT] [info] [<0.21631.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap 304
+[Thu, 12 Jul 2012 08:51:45 GMT] [info] [<0.21615.104>] 10.115.51.95 - - GET /registry/_design/ui/highcharts/highcharts.js 304
+[Thu, 12 Jul 2012 08:51:45 GMT] [info] [<0.793.104>] 10.77.61.252 - - GET /registry/ 200
+[Thu, 12 Jul 2012 08:51:45 GMT] [info] [<0.21619.104>] 10.115.51.95 - - GET /registry/_design/ui/_view/analytics?startkey=%5B%22created%22%2C%222012-07-12T08%3A51%3A51.237Z%22%5D&endkey=%5B%22created%22%2C%222012-07-05%22%5D&descending=true&reduce=false 200
+[Thu, 12 Jul 2012 08:51:45 GMT] [info] [<0.21620.104>] 10.115.51.95 - - GET /registry/_design/ui/_view/analytics?startkey=%5B%22update%22%2C%222012-07-12T08%3A51%3A51.238Z%22%5D&endkey=%5B%22update%22%2C%222012-07-05%22%5D&descending=true&reduce=false 200
+[Thu, 12 Jul 2012 08:51:45 GMT] [info] [<0.21621.104>] 10.115.51.95 - - GET /registry/_design/ui/_view/analytics?startkey=%5B%22latest%22%2C%222012-07-12T08%3A51%3A51.238Z%22%5D&endkey=%5B%22latest%22%2C%222012-07-05%22%5D&descending=true&reduce=false 200
+[Thu, 12 Jul 2012 08:51:46 GMT] [info] [<0.21637.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/optimist?pkg=optimist 304
+[Thu, 12 Jul 2012 08:51:46 GMT] [info] [<0.21638.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/uglify-js?pkg=uglify-js 304
+[Thu, 12 Jul 2012 08:51:46 GMT] [info] [<0.21503.104>] 10.115.51.95 - - GET /registry/nodify-express 200
+[Thu, 12 Jul 2012 08:51:47 GMT] [info] [<0.14143.102>] 10.77.61.252 - - GET /registry/ 200
+[Thu, 12 Jul 2012 08:51:47 GMT] [info] [<0.21503.104>] 10.115.51.95 - - GET /registry/nodify-shopify 200
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21639.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/socket.io?pkg=socket.io&version=0.7.9 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21640.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/ueberDB?pkg=ueberDB&version=0.1.1 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21641.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/async?pkg=async&version=0.1.9 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21642.104>] 10.115.51.95 - - GET /registry/npm/npm-1.1.0-3.tgz?pkg=npm&att=npm-1.1.0-3.tgz 200
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21643.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/express?pkg=express&version=2.4.5 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21644.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/joose?pkg=joose&version=3.18.0 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21639.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/clean-css?pkg=clean-css&version=0.2.4 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21632.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/express?pkg=express 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21640.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/uglify-js?pkg=uglify-js&version=1.0.7 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21641.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/gzip?pkg=gzip&version=0.1.0 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21643.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/formidable?pkg=formidable&version=1.0.2 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21644.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/log4js?pkg=log4js&version=0.3.8 304
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21503.104>] 10.115.51.95 - - GET /registry/nodist 200
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21633.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap 304
+
