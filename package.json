@@ -1,6 +1,6 @@
 {
   "name": "couchdb-log-parse",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "parser.js",
   "directories": {
     "test": "test"
