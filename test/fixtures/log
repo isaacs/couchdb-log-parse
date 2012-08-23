@@ -230,4 +230,5 @@
 [Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21644.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/log4js?pkg=log4js&version=0.3.8 304
 [Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21503.104>] 10.115.51.95 - - GET /registry/nodist 200
 [Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21633.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap 304
-
+[Tue, 31 Jul 2012 06:32:59 GMT] [error] [emulator] Error in process <0.10422.45> with exit value: {{nocatch,{os_process_error,"OS process timed out."}},[{couch_os_process,prompt,2,[{file,"/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/co...
+[Thu, 12 Jul 2012 08:51:48 GMT] [info] [<0.21633.104>] 10.115.51.95 - - GET /registry/_design/app/_show/package/wordwrap?pkg=wordwrap 304

@@ -2,7 +2,7 @@ var Stream = require('stream')
 
 module.exports = LogParser
 
-var specials = new Buffer('{}[]<>"\'\n\\')
+var specials = new Buffer('{}[]<>"\'\n\\ ')
 var openCurly = specials[0]
 var closeCurly = specials[1]
 var openSquare = specials[2]
@@ -13,6 +13,7 @@ var doubleQuote = specials[6]
 var singleQuote = specials[7]
 var lf = specials[8]
 var escape = specials[9]
+var space = specials[10]
 
 function LogParser () {
   Stream.call(this)
@@ -27,6 +28,7 @@ function LogParser () {
 
   this._quoted = false
   this._escaped = false
+  this._sawLF = false
 }
 
 LogParser.prototype = Object.create(Stream.prototype, {
@@ -45,6 +47,30 @@ LogParser.prototype._process = function (chunk) {
   // save whatever's left in this._buffer
   if (chunk) for (var i = 0; i < chunk.length && !this._paused; i ++) {
     var c = chunk[i]
+
+    if (this._sawLF) {
+      this._sawLF = false
+      if (c === space)
+        continue
+
+      var msg = this._buffer
+      this._buffer = []
+      // if it's [c,\n,x], then push [c], skip \n, continue with x
+      // if it's [\n,xxx], then just continue
+      // if it's [\n,\n,x], walk over the second one
+      if (i > 1) msg.push(chunk.slice(0, i - 1))
+      // slice off multiple \n chars
+      while ((c = chunk[i]) === lf && i < chunk.length) i++;
+      chunk = chunk.slice(i)
+      i = 0
+      this._handleMessage(msg)
+      continue
+    }
+
+    if (c === lf) {
+      this._sawLF = true
+      continue
+    }
 
     // any special char can be escaped with \
     if (this._escaped) {
@@ -72,47 +98,6 @@ LogParser.prototype._process = function (chunk) {
       continue
     }
 
-    if (c === openCurly ||
-        c === openSquare ||
-        c === openWaka) {
-      if (c === openCurly) {
-        this._curly ++;
-        this._type.push(closeCurly)
-      } else if (c === openSquare) {
-        this._square ++;
-        this._type.push(closeSquare)
-      } else {
-        this._waka ++;
-        this._type.push(closeWaka)
-      }
-      continue
-    }
-
-    if ((c === closeCurly ||
-         c === closeSquare ||
-         c === closeWaka) &&
-        c === this._type[this._type.length-1]) {
-      this._type.pop()
-      if (c === closeCurly) {
-        this._curly --;
-      } else if (c === closeSquare) {
-        this._square --;
-      } else {
-        this._waka --;
-      }
-      continue
-    }
-
-    if (c === lf && this._type.length === 0) {
-      var msg = this._buffer
-      this._buffer = []
-      msg.push(chunk.slice(0, i))
-      // slice off multiple \n chars
-      while (chunk[i] === lf && i < chunk.length) i++;
-      chunk = chunk.slice(i)
-      i = 0
-      this._handleMessage(msg)
-    }
   }
   if (chunk && chunk.length !== 0) this._buffer.push(chunk);
   if (this._ended && !this._paused) {
@@ -123,15 +108,15 @@ LogParser.prototype._process = function (chunk) {
 
 // msg is an array of chunks representing a single message
 LogParser.prototype._handleMessage = function (msg) {
-  msg = Buffer.concat(msg)
-  this.emit('data', msg + '\n')
+  msg = Buffer.concat(msg).toString().trim() + '\n'
+  this.emit('data', msg)
   if (this.listeners('message')) {
     this.emit('message', this.parseMessage(msg))
   }
 }
 
 var messageExpr = /^\[([^\]]+)\] \[([^\]]+)\] \[([^\]]+)\] ([\s\S]*)$/
-var httpExpr = /^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+) - - ([A-Z]+) (.*) ([0-9]+)$/
+var httpExpr = /^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+) - - ([A-Z]+) (.*) ([0-9]+)\n?$/
 var erlWtfExpr = /^([^{\[]+ )?([\s\S]*)/
 
 LogParser.prototype.parseMessage = function (msg) {
@@ -144,6 +129,8 @@ LogParser.prototype.parseMessage = function (msg) {
   result.level = parsed[2]
   result.pid = parsed[3]
   var more = parsed[4]
+  console.error(parsed, more, more.match(httpExpr))
+
   var http, erlWtf
   if (http = more.match(httpExpr)) {
     result.type = 'http'

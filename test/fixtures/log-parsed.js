@@ -593,4 +593,21 @@ module.exports =
     ip: '10.115.51.95',
     method: 'GET',
     url: '/registry/_design/app/_show/package/wordwrap?pkg=wordwrap',
-    statusCode: 304 } ]
+    statusCode: 304 },
+
+  { date: new Date('Mon Jul 30 2012 23:32:59 GMT-0700 (PDT)'),
+    level: 'error',
+    pid: 'emulator',
+    type: 'erl',
+    message: 'Error in process <0.10422.45> with exit value: ',
+    dump: '{{nocatch,{os_process_error,"OS process timed out."}},[{couch_os_process,prompt,2,[{file,"/home/ubuntu/hosting/build-couchdb/git-build/git@github.com%3Airiscouch%2Fcouchdb%3Ahosting_v1.2.0r8/src/couchdb/co...' },
+
+  { date: new Date('Thu Jul 12 2012 01:51:48 GMT-0700 (PDT)'),
+    level: 'info',
+    pid: '<0.21633.104>',
+    type: 'http',
+    ip: '10.115.51.95',
+    method: 'GET',
+    url: '/registry/_design/app/_show/package/wordwrap?pkg=wordwrap',
+    statusCode: 304 }
+]

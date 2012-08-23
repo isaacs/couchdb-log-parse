@@ -20,7 +20,8 @@ tap.test('basic parsing test', function (t) {
 
   var i = 0
   parser.on('message', function (c) {
-    t.same(c, expect[i], 'item '+i)
+    var r = t.same(c, expect[i], 'item '+i)
+    if (!r.ok) console.error(c)
     i++
   })
 
