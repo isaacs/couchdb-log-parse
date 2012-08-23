@@ -129,8 +129,6 @@ LogParser.prototype.parseMessage = function (msg) {
   result.level = parsed[2]
   result.pid = parsed[3]
   var more = parsed[4]
-  console.error(parsed, more, more.match(httpExpr))
-
   var http, erlWtf
   if (http = more.match(httpExpr)) {
     result.type = 'http'
