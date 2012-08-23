@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/isaacs/couchdb-log-parse.png)](http://travis-ci.org/isaacs/couchdb-log-parse)
 # couchdb-log-parse
 
 A program for parsing CouchDB logs
