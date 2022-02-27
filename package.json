@@ -6,7 +6,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "tap": "^1.2.0"
+    "tap": "^15.1.6"
   },
   "scripts": {
     "test": "tap test/*.js"
@@ -23,5 +23,11 @@
   ],
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
   "license": "ISC",
-  "description": "A program for parsing CouchDB logs"
+  "description": "A program for parsing CouchDB logs",
+  "tap": {
+    "statements": 88,
+    "branches": 80,
+    "functions": 77,
+    "lines": 90
+  }
 }

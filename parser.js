@@ -2,7 +2,7 @@ var Stream = require('stream')
 
 module.exports = LogParser
 
-var specials = new Buffer('{}[]<>"\'\n\\ ')
+var specials = Buffer.from('{}[]<>"\'\n\\ ')
 var openCurly = specials[0]
 var closeCurly = specials[1]
 var openSquare = specials[2]
