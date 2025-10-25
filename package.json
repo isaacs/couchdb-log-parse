@@ -22,7 +22,7 @@
     "parse"
   ],
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
-  "license": "ISC",
+  "license": "BlueOak-1.0.0",
   "description": "A program for parsing CouchDB logs",
   "tap": {
     "statements": 88,
